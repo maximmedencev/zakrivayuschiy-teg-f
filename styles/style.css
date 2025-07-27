@@ -9,10 +9,6 @@
 
 */
 
-/*  * {
-  outline: 1px solid red;
-} 
- */
 .page {
   display: grid;
   min-inline-size: 320px;
