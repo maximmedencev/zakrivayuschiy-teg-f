@@ -35,19 +35,18 @@
   text-align: center;
   inline-size: 100%;
   font-family: var(--font-family-accent);
-  font-style: Regular;
+  font-style: nomal;
   text-transform: uppercase;
   padding-block-start: clamp(122px, 119.1831px + 0.7512vw, 130px);
 }
 
-.header__title {
+.header__logo {
   justify-self: center;
   font-size: clamp(49px, 43.3662px + 1.5023vw, 65px);
   font-weight: 400;
   line-height: 100%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   vertical-align: bottom;
-  margin-block-end: 20px;
 }
 
 .header__subtitle {
@@ -55,8 +54,9 @@
   font-size: clamp(14px, 10.831px + 0.8451vw, 23px);
   font-weight: 400;
   line-height: 100%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   vertical-align: bottom;
+  padding-block-start: 20px;
   padding-block-end: clamp(122px, 119.1831px + 0.7512vw, 130px);
 }
 
@@ -80,7 +80,7 @@
   font-variation-settings: "wght" var(--main-font-title-weight), "slnt" 0;
   font-size: 18px;
   line-height: 22px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   vertical-align: middle;
   padding: 4px 10px 4px 10px;
   margin-inline-start: 2px;
@@ -93,6 +93,11 @@
   inline-size: calc(100% - 4px);
   block-size: clamp(375px, 260.5634px + 30.5164vw, 700px);
   justify-self: center;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  border-left: none;
+  border-right: none;
+  overflow: hidden;
 }
 
 .card__image {
@@ -100,10 +105,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
-  border-left: none;
-  border-right: none;
 }
 
 .card__label {
@@ -112,10 +113,10 @@
   right: 25px;
   font-family: var(--font-family-accent);
   font-weight: 400;
-  font-style: regular;
+  font-style: normal;
   font-size: 14px;
   line-height: 100%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: #000;
   opacity: 50%;
@@ -136,17 +137,16 @@
 }
 
 .card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
   inline-size: clamp(321px, 206.5634px + 30.5164vw, 646px);
   font-family: var(--font-family-main);
   font-size: 18px;
   line-height: 21px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   margin: 25px 25px 23px 25px;
   justify-self: center;
-}
-
-.card__description {
-  margin-block-end: 25px;
 }
 
 .card__interaction {
@@ -247,7 +247,7 @@
 
 .button {
   transition: box-shadow 0.3s ease;
-  font-style: Regular;
+  font-style: normal;
   background-color: var(--theme-background);
   border: 2px solid #000000;
   position: relative;
@@ -293,19 +293,17 @@
   padding-top: 4px;
 }
 
-.footer {
+.save-container {
   display: flex;
   background-color: transparent;
   justify-content: center;
 }
 
-.btn-show-modal {
+.save-container__btn-show-modal {
   display: flex;
   flex-direction: row;
   inline-size: clamp(306px, 295.7887px + 2.723vw, 335px);
   block-size: clamp(55px, 94.2113px + -2.723vw, 84px);
-
-  margin-block-start: 50px;
   margin-block-end: 100px;
   align-items: center;
 }
@@ -322,9 +320,9 @@
 .btn-show-modal-text {
   font-family: var(--font-family-accent);
   font-weight: 400;
-  font-style: Regular;
+  font-style: normal;
   line-height: 90%;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   vertical-align: middle;
   margin-inline-start: 9px;
   margin-block-start: 2px;
@@ -333,7 +331,6 @@
 .dialog-window {
   inline-size: clamp(341px, 336.7746px + 1.1268vw, 353px);
   border: 2px solid #000000;
-  top: -5px;
 }
 
 .dialog-container {
@@ -363,10 +360,10 @@
   grid-area: "text";
   font-family: var(--font-family-accent);
   font-weight: 400;
-  font-style: Regular;
+  font-style: normal;
   font-size: 14px;
   line-height: 21px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-transform: uppercase;
   padding-inline-start: 15px;
 }
@@ -409,7 +406,7 @@
 }
 
 @media (width <= 375px) {
-  .btn-show-modal {
+  .save-container__btn-show-modal {
     flex-direction: column;
   }
 
