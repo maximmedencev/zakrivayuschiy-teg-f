@@ -49,7 +49,7 @@
   vertical-align: bottom;
 }
 
-.header__subtitle {
+.header__title {
   justify-self: center;
   font-size: clamp(14px, 10.831px + 0.8451vw, 23px);
   font-weight: 400;
